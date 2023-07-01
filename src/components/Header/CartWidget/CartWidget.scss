@@ -1,0 +1,17 @@
+.cartWidget{
+    display: flex;
+    background-color: transparent;
+    border: none;
+    gap: 10px;
+    cursor: pointer;
+    .cartStyle{
+        filter: invert(100%);
+        width: 25px;
+    }
+    .cartCounter{
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}

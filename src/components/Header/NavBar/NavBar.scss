@@ -1,0 +1,15 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+    .navbarLink{
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 10px;
+    }
+  }
