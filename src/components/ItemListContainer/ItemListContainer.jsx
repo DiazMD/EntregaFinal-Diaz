@@ -6,7 +6,7 @@ export const ItemListContainer = ({proyecto}) => {
         <div className="catalogoContainer">
             <h2>{proyecto}</h2>
             <hr />
-            <p>¡Muchas gracias!</p>
+            <p>¡¡Muchas gracias!!</p>
         </div>
     )
 }
