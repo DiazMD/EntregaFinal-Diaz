@@ -1,16 +1,18 @@
-import ImgCard from "./ItemCard.css"
+import { Link } from "react-router-dom"
+import "./ItemCard.scss" 
 
 
 
-export const ItemCard = ({item}) => {
+export const ItemCard = ({item, categoryId}) => {
 
     return (
-        <div className='col-3 m-2'>
-            <h4>{item.nombre}</h4>
+        <div className="itemCard">
+            <h5 className="TitleCard">{item.nombre}</h5>
             <img src={item.img} alt={item.nombre} className="ImgCard"/>
-            <p>{item.descripcion}</p>
-            <p>Precio: ${item.precio}</p>
-            <button className='btn btn-primary'>Comprar</button>
+            <p className="textCard">{item.descripcion}</p>
+            <p className="PriceCard">Precio: ${item.precio}</p>
+            <Link to={`/categorias/${categoryId}/${item.id}`} className='btn btn-primary'>Ver más</Link>
+            <hr/>
         </div>
     )
 }

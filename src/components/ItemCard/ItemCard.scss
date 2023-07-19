@@ -1,0 +1,16 @@
+.itemCard{
+    padding: 15px;
+      .textCard{
+        font-size: 0.9rem;
+      }
+      .PriceCard{
+        font-size: 1.2rem;
+      }
+      .ImgCard {
+        width: 320px;
+    }
+  }
+  .itemCard:hover{
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }

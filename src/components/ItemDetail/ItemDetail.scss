@@ -1,0 +1,17 @@
+.cardDetail{
+    padding: 15px;
+      .textDetail{
+        font-size: 1.5rem;
+      }
+      .priceDetail{
+        font-size: 2rem;
+      }
+      .imgDetail {
+        width: 400px;
+    }
+}
+.cardDetail:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.15);
+  }
+  

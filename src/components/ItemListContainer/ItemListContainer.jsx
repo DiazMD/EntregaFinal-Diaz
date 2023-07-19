@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 import "./ItemListContainer.scss"
-import { pedirDatos } from "../../helpers/getData"
 import { ItemList } from "../ItemList/ItemList"
 import { useParams } from 'react-router-dom'
+import { getData } from "../../helpers/getData"
 
 
 
@@ -15,7 +15,7 @@ export const ItemListContainer = () => {
     useEffect(() => {
         setLoading(true)
 
-        pedirDatos()
+        getData()
             .then(r => {
                 if (categoryId) {
                     setProductos( r.filter(prod => prod.category === categoryId) )
@@ -34,7 +34,7 @@ export const ItemListContainer = () => {
             {
                 loading
                     ? <h2>Cargando...</h2>
-                    : <ItemList productos={productos}/> 
+                    : <ItemList productos={productos} categoryId={categoryId}/> 
             }
         </div>
     )

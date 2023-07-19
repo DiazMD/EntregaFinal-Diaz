@@ -10,9 +10,9 @@ export const NavBar = () => {
         <div className="navbar">
             <ul>
                 <Link className="navbarLink" to="/"> Inicio </Link>
-                <Link className="navbarLink" to="/categorias/pantalon">Pantalones</Link>
-                <Link className="navbarLink" to="/categorias/camisa">Camisas</Link>
-                <Link className="navbarLink" to="/categorias/sweater">Sweaters</Link>
+                <Link className="navbarLink" to="/categorias/pantalones">Pantalones</Link>
+                <Link className="navbarLink" to="/categorias/camisas">Camisas</Link>
+                <Link className="navbarLink" to="/categorias/sweaters">Sweaters</Link>
                 <Link to="#" className="navbarLink">Contacto</Link>
             </ul>
         <CartWidget /> 
