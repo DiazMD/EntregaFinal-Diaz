@@ -7,7 +7,7 @@ export const ItemCard = ({item, categoryId}) => {
 
     return (
         <div className="itemCard">
-            <h5 className="TitleCard">{item.nombre}</h5>
+            <h5 className="titleCard">{item.nombre}</h5>
             <img src={item.img} alt={item.nombre} className="ImgCard"/>
             <p className="textCard">{item.descripcion}</p>
             <p className="PriceCard">Precio: ${item.precio}</p>

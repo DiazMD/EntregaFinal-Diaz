@@ -8,7 +8,11 @@ export const ItemList = ({productos, categoryId}) => {
     return (
        <div> 
         <div className="container-titulo">
-            <h2>Productos</h2>
+            {
+                categoryId
+                ? <h2>{categoryId}</h2>
+                : <h2>Productos</h2>
+            }
             <hr />
         </div>    
 

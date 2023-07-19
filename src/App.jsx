@@ -5,6 +5,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Error404 } from './components/Error404/Error404'
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
+import { Footer } from './components/Footer/Footer'
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         <Route path="/categorias/:categoryId/:itemId" element={ <ItemDetailContainer />}/>
         <Route path="*" element={ <Error404 />}/>
       </Routes>
+
+      <Footer />
     </BrowserRouter>
   )
 }

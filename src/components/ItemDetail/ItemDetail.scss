@@ -1,10 +1,14 @@
 .cardDetail{
     padding: 15px;
+    text-transform:  uppercase;
+    .titleDetail{
+      font-size: 1.5rem;
+    }
       .textDetail{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
       }
       .priceDetail{
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
       .imgDetail {
         width: 400px;
@@ -15,3 +19,6 @@
     box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.15);
   }
   
+  .container-titulo{
+    text-transform: uppercase;
+  }
