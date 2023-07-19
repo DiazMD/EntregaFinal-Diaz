@@ -1,0 +1,90 @@
+[
+{
+    "id": 1,
+    "nombre": "Camisa oxford celeste",
+    "descripcion": "Camisa sport estilo Oxford color celeste",
+    "precio": 6500,
+    "img": "../../Camisa-Oxford-Celeste.webp",
+    "category": "camisa"
+},
+{
+    "id": 2,
+    "nombre": "Camisa de vestir blanca",
+    "descripcion": "Camisa de vestir color blanca",
+    "precio": 7600,
+    "img": "../../Camisa-Vestir-Blanca.webp",
+    "category": "camisa"
+},
+{
+    "id": 3,
+    "nombre": "Camisa de vestir celeste",
+    "descripcion": "Camisa de vestir color celeste",
+    "precio": 7600,
+    "img": "../../Camisa-Vestir-Celeste.webp",
+    "category": "camisa"
+},
+{
+    "id": 4,
+    "nombre": "Pantalon gabardina Negro",
+    "descripcion": "Pantalon de gabardina color negro",
+    "precio": 9900,
+    "img": "../../Pantalon-Gabardina-Negro.webp",
+    "category": "pantalon"
+},
+{
+    "id": 5,
+    "nombre": "Pantalon de gabardina azul",
+    "descripcion": "Pantalon de gabardina color azul",
+    "precio": 9900,
+    "img": "../../Pantalon-Gabardina-Azul.webp",
+    "category": "pantalon"
+},
+{
+    "id": 6,
+    "nombre": "Pantalon de gabardina blanco",
+    "descripcion": "Pantalon de gabardina color blanco",
+    "precio": 9900,
+    "img": "../../Pantalon-Gabardina-Blanco.webp",
+    "category": "pantalon"
+},
+{
+    "id": 7,
+    "nombre": "Pantalon de vestir azul",
+    "descripcion": "Pantalon de vestir color azul",
+    "precio": 11000,
+    "img": "../../Pantalon-Vestir-Azul.webp",
+    "category": "pantalon"
+},
+{
+    "id": 8,
+    "nombre": "Sweater cuello redondo azul",
+    "descripcion": "Sweater de cuello redondo color azul",
+    "precio": 6900,
+    "img": "../../Sweater-Redondo-Azul.webp",
+    "category": "sweater"
+},
+{
+    "id": 9,
+    "nombre": "Swater trenzado negro",
+    "descripcion": "Sweater trenzado de color negro",
+    "precio": 7800,
+    "img": "Sweater-Trenzado-Negro.webp",
+    "category": "sweater"
+},
+{
+    "id": 10,
+    "nombre": "Sweater cuello en V beige",
+    "descripcion": "Sweater cuello en V color beige",
+    "precio": 7500,
+    "img": "Sweater-V-Beige.webp",
+    "category": "sweater"
+},
+{
+    "id": 11,
+    "nombre": "Sweater cuello en V gris",
+    "descripcion": "Sweater trenzado de color gris",
+    "precio": 7500,
+    "img": "Sweater-V-Gris.webp",
+    "category": "sweater"
+}
+]
