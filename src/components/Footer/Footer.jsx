@@ -6,8 +6,8 @@ export const Footer = () => {
 
     return (
         <footer className="footer">
-            <div class="containerFooter">
-                <div class="boxFooter">
+            <div className="containerFooter">
+                <div className="boxFooter">
                     <p>Segunda Preentrega - ReactJs</p>
                 </div>
                 <div>
