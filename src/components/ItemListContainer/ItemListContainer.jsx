@@ -2,10 +2,9 @@ import { useState, useEffect } from "react"
 import "./ItemListContainer.scss"
 import { ItemList } from "../ItemList/ItemList"
 import { useParams } from 'react-router-dom'
-import { getData } from "../../helpers/getData"
 import { collection, getDocs, query, where } from "firebase/firestore"
 import { db } from "../../firebase/config"
-
+import { Error404 } from "../Error404/Error404"
 
 
 export const ItemListContainer = () => {

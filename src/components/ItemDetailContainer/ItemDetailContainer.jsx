@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
 import { getData } from "../../helpers/getData"
-import { useParams } from "react-router-dom"
+import { Navigate, useParams } from "react-router-dom"
 import { ItemDetail } from "../ItemDetail/ItemDetail"
 import "../ItemListContainer/ItemListContainer.scss"
 import { doc, getDoc } from "firebase/firestore"
 import { db } from "../../firebase/config"
+import { Error404 } from "../Error404/Error404"
 
 
 
@@ -31,6 +32,13 @@ export const ItemDetailContainer = () => {
             .finally(() => setLoading(false))
         
     }, [])
+
+    if (item)
+        if (item.nombre == undefined){
+            return (
+                <Error404 />
+            )
+        }
 
     return (
         <div className="catalogoContainer">

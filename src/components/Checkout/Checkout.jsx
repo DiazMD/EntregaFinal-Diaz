@@ -1,6 +1,6 @@
 import { useContext, useState } from "react"
 import { CartContext } from "../CartContext/CartContext"
-import { collection, addDoc } from "firebase/firestore"
+import { collection, addDoc, getDocs, writeBatch, query, where, documentId } from "firebase/firestore"
 import { db } from "../../firebase/config"
 import { Link, Navigate } from "react-router-dom"
 
@@ -24,7 +24,7 @@ export const Checkout = () => {
         })
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
         console.log(values);
 
@@ -37,13 +37,44 @@ export const Checkout = () => {
 
         console.log(orden);
 
+        const batch = writeBatch(db)
+        const productosRef = collection(db, "productos")
+        const q = query(productosRef, where (documentId(), "in", cart.map(item => item.id)))
         const ordenRef = collection(db, "ordenes")
+
+        const productos = await getDocs(q)
+        const outOfStock = []
+
+        productos.docs.forEach((doc) => {
+            const item = cart.find(prod => prod.id === doc.id)
+            const stock = doc.data().stock
+
+            if (stock >= item.counter) {
+                batch.update(doc.ref, {
+                    stock: stock - item.counter
+                })
+            } else {
+                outOfStock.push(item)
+            }
+        })
+
+        if (outOfStock.length === 0) {
+            await batch.commit()
+            const doc = await  addDoc(ordenRef, orden)
+            vaciarCarrito()
+            setOrdenId(doc.id)
+        } else {
+            alert("Producto sin stock")
+            console.log(outOfStock)
+        }
+
+        /*const ordenRef = collection(db, "ordenes")
         addDoc(ordenRef, orden)
             .then((doc) => {
                 console.log(doc.id);
                 vaciarCarrito()
                 setOrdenId(doc.id)
-            })
+            })*/
     }
 
     if (ordenId) {
