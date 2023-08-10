@@ -37,6 +37,7 @@ export const CartView = () => {
 
             <h4>Total: ${totalCompra()}</h4>
             <button onClick={vaciarCarrito} className="btn btn-danger">Vaciar Carrito</button>       
+            <Link to="/checkout" className="btn btn-success">Terminar mi compra</Link>
         </div>
     )
 }
